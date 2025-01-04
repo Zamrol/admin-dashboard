@@ -1,4 +1,4 @@
-import { BRAND } from "@/types/brand";
+import { BRAND } from "@/types/income";
 import Image from "next/image";
 import DropdownDefault from "../Dropdowns/DropdownDefault";
 

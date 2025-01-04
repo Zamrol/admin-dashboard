@@ -1,29 +1,35 @@
-import { Package } from "@/types/package";
+import { Akun } from "@/types/akun";
 
-const packageData: Package[] = [
+const akun: Akun[] = [
   {
-    name: "Free package",
-    price: 0.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
+    name: "Petambak 1",
+    email: `petambak1@gmail.com`,
+    role: "user",
   },
   {
-    name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Paid",
+    name: "Petambak 2",
+    email: `petambak2@gmail.com`,
+    role: "user",
   },
   {
-    name: "Business Package",
-    price: 99.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Unpaid",
+    name: "Petambak 3",
+    email: `petambak3@gmail.com`,
+    role: "user",
   },
   {
-    name: "Standard Package",
-    price: 59.0,
-    invoiceDate: `Jan 13,2023`,
-    status: "Pending",
+    name: "Petambak 4",
+    email: `petambak4@gmail.com`,
+    role: "user",
+  },
+  {
+    name: "Petambak 5",
+    email: `petambak5@gmail.com`,
+    role: "user",
+  },
+  {
+    name: "Petambak 6",
+    email: `petambak6@gmail.com`,
+    role: "user",
   },
 ];
 
@@ -35,44 +41,43 @@ const TableThree = () => {
           <thead>
             <tr className="bg-gray-2 text-left dark:bg-meta-4">
               <th className="min-w-[220px] px-4 py-4 font-medium text-black dark:text-white xl:pl-11">
-                Package
+                Nama
               </th>
               <th className="min-w-[150px] px-4 py-4 font-medium text-black dark:text-white">
-                Invoice date
+                Email
               </th>
               <th className="min-w-[120px] px-4 py-4 font-medium text-black dark:text-white">
-                Status
+                Role
               </th>
               <th className="px-4 py-4 font-medium text-black dark:text-white">
-                Actions
+                Action
               </th>
             </tr>
           </thead>
           <tbody>
-            {packageData.map((packageItem, key) => (
+            {akun.map((akunItem, key) => (
               <tr key={key}>
                 <td className="border-b border-[#eee] px-4 py-5 pl-9 dark:border-strokedark xl:pl-11">
                   <h5 className="font-medium text-black dark:text-white">
-                    {packageItem.name}
+                    {akunItem.name}
                   </h5>
-                  <p className="text-sm">${packageItem.price}</p>
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <p className="text-black dark:text-white">
-                    {packageItem.invoiceDate}
+                    {akunItem.email}
                   </p>
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
                   <p
                     className={`inline-flex rounded-full bg-opacity-10 px-3 py-1 text-sm font-medium ${
-                      packageItem.status === "Paid"
+                      akunItem.role === "user"
                         ? "bg-success text-success"
-                        : packageItem.status === "Unpaid"
-                          ? "bg-danger text-danger"
-                          : "bg-warning text-warning"
+                        : akunItem.role === "admin"
+                          ? "bg-warning text-warning"
+                          : "bg-danger text-danger"
                     }`}
                   >
-                    {packageItem.status}
+                    {akunItem.role}
                   </p>
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
