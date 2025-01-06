@@ -51,14 +51,13 @@ const TableOne = () => {
         <div className="flex flex-col">
           {incomeData.map((item, key) => (
             <div
-              className={`grid grid-cols-3 items-center gap-3 p-1 ${key !== incomeData.length - 1 ? "border-b border-stroke dark:border-strokedark" : ""}`}
+              className={`grid grid-cols-3 items-center gap-3 p-3 ${key !== incomeData.length - 1 ? "border-b border-stroke dark:border-strokedark" : ""}`}
               key={key}
             >
               <div className="flex items-center gap-3">
-                <Image src={item.logo} alt="Brand" width={35} height={35} />
+                <Image src={item.logo} alt="Brand" width={40} height={40} />
+                <p className="text-black dark:text-white font-medium">{item.name}</p>
               </div>
-              <p className="text-black dark:text-white">{item.name}</p>
-
               <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
               <p className="text-green-500 font-semibold">{item.amount}</p>
             </div>
@@ -77,7 +76,7 @@ const TableOne = () => {
             >
               <div className="flex items-center gap-3">
                 <Image src={item.logo} alt="Brand" width={40} height={40} />
-                <p className="text-black dark:text-white">{item.name}</p>
+                <p className="text-black dark:text-white font-medium">{item.name}</p>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
               <p className="text-red-500 font-semibold">{item.amount}</p>

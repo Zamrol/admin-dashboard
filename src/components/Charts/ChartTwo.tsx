@@ -78,12 +78,8 @@ interface ChartTwoState {
 const ChartTwo: React.FC = () => {
   const series = [
     {
-      name: "Sales",
+      name: "Visitor",
       data: [44, 55, 41, 67, 22, 43, 65],
-    },
-    {
-      name: "Revenue",
-      data: [13, 23, 20, 8, 13, 27, 15],
     },
   ];
 
@@ -92,7 +88,7 @@ const ChartTwo: React.FC = () => {
       <div className="mb-4 justify-between gap-4 sm:flex">
         <div>
           <h4 className="text-xl font-semibold text-black dark:text-white">
-            Profit this week
+            Visitor Analytics
           </h4>
         </div>
         <div>
