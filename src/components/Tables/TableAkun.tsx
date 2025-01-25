@@ -68,15 +68,7 @@ const TableAkun = () => {
                   </p>
                 </td>
                 <td className="border-b border-[#eee] px-4 py-5 dark:border-strokedark">
-                  <p
-                    className={`inline-flex rounded-full bg-opacity-10 px-3 py-1 text-sm font-medium ${
-                      akunItem.role === "user"
-                        ? "bg-success text-success"
-                        : akunItem.role === "admin"
-                          ? "bg-warning text-warning"
-                          : "bg-danger text-danger"
-                    }`}
-                  >
+                <p className="text-black dark:text-white">
                     {akunItem.role}
                   </p>
                 </td>
