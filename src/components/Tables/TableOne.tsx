@@ -2,19 +2,19 @@ import Image from "next/image";
 
 const incomeData = [
   {
-    logo: "/images/brand/brand-01.svg",
+    logo: "/images/icon/petambak.svg",
     name: "Petambak 1",
     date: "18 Desember 2024",
     amount: "+$32",
   },
   {
-    logo: "/images/brand/brand-02.svg",
+    logo: "/images/icon/petambak2.svg",
     name: "Petambak 2",
     date: "18 Desember 2024",
     amount: "+$45",
   },
   {
-    logo: "/images/brand/brand-03.svg",
+    logo: "/images/icon/petambak3.svg",
     name: "Petambak 3",
     date: "18 Desember 2024",
     amount: "+$65",
@@ -23,19 +23,19 @@ const incomeData = [
 
 const outcomeData = [
   {
-    logo: "/images/brand/brand-01.svg",
+    logo: "/images/icon/petambak.svg",
     name: "Petambak 1",
     date: "18 Desember 2024",
     amount: "-$30",
   },
   {
-    logo: "/images/brand/brand-02.svg",
+    logo: "/images/icon/petambak2.svg",
     name: "Petambak 2",
     date: "18 Desember 2024",
     amount: "-$43",
   },
   {
-    logo: "/images/brand/brand-03.svg",
+    logo: "/images/icon/petambak3.svg",
     name: "Petambak 3",
     date: "18 Desember 2024",
     amount: "-$63",
@@ -54,9 +54,9 @@ const TableOne = () => {
               className={`grid grid-cols-3 items-center gap-3 p-3 ${key !== incomeData.length - 1 ? "border-b border-stroke dark:border-strokedark" : ""}`}
               key={key}
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 <Image src={item.logo} alt="Brand" width={40} height={40} />
-                <p className="text-black dark:text-white font-medium">{item.name}</p>
+                <p className="text-black dark:text-white font-normal text-sm">{item.name}</p>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
               <p className="text-green-500 font-semibold">{item.amount}</p>
@@ -76,7 +76,7 @@ const TableOne = () => {
             >
               <div className="flex items-center gap-3">
                 <Image src={item.logo} alt="Brand" width={40} height={40} />
-                <p className="text-black dark:text-white font-medium">{item.name}</p>
+                <p className="text-black dark:text-white font-normal text-sm">{item.name}</p>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
               <p className="text-red-500 font-semibold">{item.amount}</p>

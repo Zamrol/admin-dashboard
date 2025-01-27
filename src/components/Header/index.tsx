@@ -1,6 +1,6 @@
 import Link from "next/link";
 import DarkModeSwitcher from "./DarkModeSwitcher";
-import DropdownMessage from "./DropdownMessage";
+import SettingsNav from "./SettingsNavigation";
 import DropdownNotification from "./DropdownNotification";
 import DropdownUser from "./DropdownUser";
 import Image from "next/image";
@@ -65,8 +65,8 @@ const Header = (props: {
             />
           </Link>
         </div>
-        <Link className="" href="/">
-          <p className=" text-black-2 mr-9 font-extrabold text-xl">Overview</p>
+        <Link className="text-black-2 mr-9 font-extrabold text-xl hover:text-blue-400" href="/">
+                  Overview
         </Link>
         
         <div className="flex items-center gap-3 2xsm:gap-8">
@@ -114,7 +114,7 @@ const Header = (props: {
             {/* <!-- Dark Mode Toggler --> */}
 
             {/* <!-- Chat Notification Area --> */}
-            <DropdownMessage />
+            <SettingsNav />
             {/* <!-- Chat Notification Area --> */}
 
             {/* <!-- Notification Menu Area --> */}
