@@ -1,7 +1,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import db from './data/database.js';
+import session from 'express-session';
+import db from './config/Database.js';
+import UserRoute from './routes/UserRoute.js';
+import FishExpertRoute from './routes/FishExpertRoute.js';
 
 // Load Environment Variables
 dotenv.config();
@@ -9,9 +12,25 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors()); // Mengaktifkan CORS
+app.use(cors({
+  credentials : true,
+  origin : 'http://localhost:3000'
+}
+)); // Mengaktifkan CORS untuk mengizinkan domain frontend
 app.use(express.json());
 
+app.use(session({
+  secret : process.env.SESS_SECRET,
+  resave : false,
+  saveUninitialized : true,
+  cookie : {
+    secure :'auto'
+  }
+}));
+
+// Route
+app.use (UserRoute);
+app.use (FishExpertRoute);
 // Cek Koneksi Database
 app.get('/check-db', async (req, res) => {
   try {
