@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ChartTwo from "../Charts/ChartTwo";
-import TableOne from "../Tables/TableOne";
+import TableRevenue from "../Tables/TableRevenue";
 import CardDataStats from "../CardDataStats";
 import Image from "next/image";
 
@@ -46,7 +46,7 @@ const Dashboard: React.FC = () => {
       <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
         
         <div className="col-span-12 xl:col-span-12">
-          <TableOne />
+          <TableRevenue />
         </div>
       
         <ChartTwo />

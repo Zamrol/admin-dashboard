@@ -20,7 +20,7 @@ const menuGroups = [
         icon: (
           <img
             className="fill-current"
-            src="/images/icon/dashboard.png"
+            src="/images/icon/dashboard.svg"
             alt="Dashboard Icon"
             width={30}
           />
@@ -98,7 +98,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
             <Image
               width={80}
               height={12}
-              src={"/images/icon/dokter-ikan.svg"}
+              src={"/images/brand/dokter-ikan.svg"}
               alt="Logo"
               priority
             />

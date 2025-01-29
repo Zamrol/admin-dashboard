@@ -42,7 +42,7 @@ const outcomeData = [
   },
 ];
 
-const TableOne = () => {
+const TableRevenue = () => {
   return (
     <div className="flex gap-6">
       {/* Income Table */}
@@ -88,4 +88,4 @@ const TableOne = () => {
   );
 };
 
-export default TableOne;
+export default TableRevenue;
